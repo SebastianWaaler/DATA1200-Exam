@@ -1,0 +1,299 @@
+/*Color palette: https://colorhunt.co/palette/ef9595efb495efd595ebef95*/
+
+body {
+    background-image:linear-gradient(#EF9595, #EFD595); /*sets background to a gradient from #EF9595 to #EFD595 (top left to bottom right)*/
+    background-attachment: fixed; /*Background image doesnt scroll with page*/
+    color: white;
+    height: 100%;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    line-height: 1.2; /*creates space between each line*/
+    margin: 0; 
+}
+
+.container {  display: grid; /*creates grid layout, content displayed in grid-boxes*/
+    grid-template-columns: 50% 50%;/*sets column width to 50% for each column*/
+    grid-template-rows: 70px 1fr; /*sets first row width to 70 px, and the second to take up the 
+    remaining space*/
+    gap: 0; /*0 gap between each row and column*/
+    grid-template-areas: /*specifies each area in the grid, header takes up one row and columns, 
+    contentbox-1 and 2 takes up 1 row together and 1 column each*/
+      "Header Header"
+      "content-box1 content-box2";
+  }
+  
+  .Header { grid-area: Header;} /*gives Header class the "Header" area in the grid*/
+   
+  .content-box1 { 
+    grid-area: content-box1; 
+    padding: 5%; /*creates between this element and content inside*/
+}
+  
+  .content-box2 { 
+    grid-area: content-box2; 
+    padding: 5%;
+}
+
+.dropdown-button {
+    display: none;
+}
+
+/*used for responsive web-page, does something when screen is less than 480px*/
+@media (max-width: 480px) {
+    .dropdown-button {
+        display: block; /*displays the dropdown button*/
+    }
+
+    .navigation-list {
+        visibility: hidden; /*hides navigation list when the screen is less than 480px*/
+    }
+    /*When width is 480px, the navigation list is replaced with a dropdown menu*/
+
+    nav {
+        border-bottom: 2px solid white;
+    }
+
+}
+
+@media (max-width: 880px) { /*When the screen is 880px or less the font size for the span elements inside the accessibility class is 250%*/
+    .accessibility-icon span{
+        font-size: 250%; 
+    }
+}
+
+@media (min-width: 881px){ /*When the screen is more than 880px the font size for the span elements inside the accessibility class is 600%*/
+    .accessibility-icon span{
+        font-size: 600%;
+    }
+}
+
+/*media used to make responsive page, does something when the page is less than 880px*/
+@media (max-width: 880px) {
+
+    .container { 
+        display: block;
+        margin-top: 20px;
+    }
+    .content-box {
+        flex-direction: column; /*direction of the flex display is column. displays the elements under each other*/
+      
+      }
+    .code-image {
+        flex-direction: column; /*direction of the flex display is column*/
+    }  
+    .code-image img {
+        box-sizing: border-box; /*border box includes padding and border in the images total width and height*/
+        width: 95%;
+    }  
+    
+    .accessibility-image {
+        box-sizing: border-box; /*border box includes padding and border in the images total width and height*/
+        width: 95%;
+    }  
+}
+
+  .nav-link{
+    display: block; /*displayed as a block element, takes up the whole pages width*/
+    color: white;
+    padding: 15px; /*creates space between the content inside an element(text in this case) and the elements edge. Esentially used to make nav topics bigger in this case.*/
+    text-decoration: none; /*Removes the default */
+}
+
+li {
+    float: left; /*Positions the list elements to the left of its container*/
+}    
+
+li:hover { /*does something when you hover the list items*/
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+}
+    
+
+ul {
+    list-style: none; /*Gives list items no style, used here to remove the default circle style*/
+    overflow: hidden; /*Used to control the content thats to big for our navigator, 'hidden' clips the overflow away */
+    padding: 0; /*Removes spacing between the nav element and the list*/
+}
+
+nav {
+    position: absolute; /*positions relative to nearest parent*/
+    left: 0; 
+    top: -10px;
+    width: 100%;
+}
+
+.icons {
+    float: right; /*positions icons to the right*/
+    color: white;
+    padding-right: 10px; /*creates space on the right of the icons*/
+}
+
+
+.intro-image{
+    width: 80%;
+}
+
+.intro-content {
+    margin-top:10%;
+    padding: 20%;
+}
+
+.button {
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 50px; /*rounds each corner of the element*/
+    width: 30%;
+    height: 20px;
+    text-align: center; /*aligns text in the center of element*/
+    padding: 10px;
+}
+
+.button:hover { /*does something when you hover the button class*/
+    background-color: #EFD595;
+}
+
+.intro-header {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    box-shadow:0px 0px 50px 10px rgba(0, 0, 0, 0.70) ; /*horizontal offset, vertical offset, blur radius, spread radius, then the color with a 0.70 opacity*/
+    border-radius: 25px;
+}
+
+.library {
+    height: 50%;
+}
+
+.exam {
+    height: 50%;
+}
+
+.accessibility-container {  display: grid; /*this container does the same as the earlier one, just different size values and more rows and columns*/
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 70px auto auto auto 1fr;
+    gap: 0;
+    grid-template-areas:
+      "Header Header Header"
+      "Header-content Header-content Header-content"
+      "content content content"
+      "text-content text-content text-content"
+      "code-image code-image code-image";
+  }
+  
+  .accessibility-header { 
+    grid-area: Header;
+    background-color: black;
+ }
+  
+  .Header-content { 
+    grid-area: Header-content;
+    background-color: #222;
+    display: flex; 
+    justify-content: center; /*centers content*/
+}
+  
+  .content-box { 
+    grid-area: content;
+    display: flex;
+    background-color: black;
+    padding: 5px;
+ }
+  
+  
+  .text-content { 
+    grid-area: text-content;
+    background-color: #222;
+    padding: 10px;
+    line-height: 1.5;
+ }
+
+ .code-image {
+    grid-area: code-image;
+    background-color: black;
+    display: flex;
+    padding: 5px;
+ }
+
+ .code-image img {
+    margin: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;  
+    transition: .3s;
+    padding: 10px;
+ }
+
+ .code-image img:hover {
+    border-color: white;
+    transform: scale(1.02);  
+ }
+
+
+.content-box img {
+    margin: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;    
+    padding: 10px;
+    transition: .3s; /*animation duration*/
+  }
+
+  .content-box img:hover {
+    border-color: white;
+    transform: scale(1.01); /*animation that increases size of image by 1.02*/
+  }
+
+.accessibility-icon {
+    border-radius: 50%; /*shapes this div as a circle*/
+    text-align: center;
+    margin: 5%;
+    padding: 2%;
+    background-color: black;
+    box-shadow:0px 0px 50px 10px rgba(0, 0, 0, 0.70) ; /*horizontal offset, vertical offset, blur radius, spread radius, then the color with a 0.70 opacity*/
+   
+}
+
+.dropdown-menu{
+    position: relative;
+    display: inline-block; /*displays the dropdown links under each other*/
+}
+
+.dropdown-links {
+    position: absolute; /*positioned relative to the dropdown-menu class*/
+    display: none; /*links are hidden until you hover the dropdown button*/
+    background-color: white;
+    padding: 20%;
+    border-radius: 15px;
+}
+
+.dropdown-links a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.dropdown-menu:hover .dropdown-links {
+    display: block; /*displays dropdown links when you hover dropdown menu*/
+  }
+
+  .dropdown-links a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    /*when link is hovered, it gets thicker and underlined*/
+}
+
+.dropdown-button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 1.2rem; /*sets font size to 1.2 times the default font size*/
+
+}
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /><!--Link to google symbols used in the HEader-content class-->    
+    <title>Accessibility</title>
+</head>
+<body>
+    <div class="accessibility-container"> <!--Container that stores all content on this page-->
+        <div class="accessibility-header"> <!--Header that stores navigation menu/bar-->
+            <nav><!--nav element used to make the navigation bar on the top of our page-->
+                <ul class="navigation-list"><!--unordered list to make a list of the topics in teh nav bar-->
+                    <li><a class="nav-link" href="../index.html">Home</a></li>
+                    <li><a class="nav-link" href="accessibility.html">Accessibility</a></li>
+                    <li><a class="nav-link" href="topical.html">Topical</a></li>
+                    <li><a class="nav-link" href="campus.html">Campus</a></li>
+                </ul>
+                
+            </nav>
+            <div class="dropdown-menu">
+                <button class="dropdown-button">Menu</button>
+                <div class="dropdown-links">
+                    <a href="../index.html">Home</a>
+                    <a href="accessibility.html">Accessibility</a>
+                    <a href="topical.html">Topical</a>
+                    <a href="campus.html">Campus</a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="Header-content"> <!--container for header content, stores icons for accessibility (decoration)-->
+            <!--Google icons, https://fonts.google.com/icons-->
+            <div class="accessibility-icon">
+                <span class="material-symbols-outlined">accessibility_new</span> <!--From googles symbols page, class shows what type of symbol (outlined), text shows what symbol is used -->
+            </div>
+            <div class="accessibility-icon">
+                <span class="material-symbols-outlined">hearing</span>
+            </div>
+            <div class="accessibility-icon">
+                <span class="material-symbols-outlined">visibility_off</span>
+            </div>
+            <div class="accessibility-icon">
+                <span class="material-symbols-outlined">accessible</span>
+            </div>
+        </div>
+        <div class="content-box">
+            <img src="../images/webaim1.png" alt="Photo: Screenshot1" class="accessibility-image"/> <!--Image, alt: alternate text for Photo, shows source-->
+            <img src="../images/webaim2.png" alt="Photo: Screenshot2" class="accessibility-image"/>
+            <img src="../images/webaim3.png" alt="Photo: Screenshot3" class="accessibility-image"/>
+        </div>
+        
+        <div class="text-content">  
+            <h1>Accessibility</h1>
+            <p>
+                To make use of the Webaim accessibility test, we started by downloading the web extension for easy access. We found this to be the easiest way to use it for our local website. Before we started,
+                 we decided we wanted a responsive webpage, so it could be used by phones and smaller devices as well as PC. Before we started coding, we also found a small color palette that we would use for 
+                the whole website (apart from the accessibility page where we used another set of colors). We did this to stay consistent and to have good color contrasts. We decided to be consistent for the design 
+                of all the pages but the accessibility page.  We wanted to use the accessibility page to show more of our skills and knowledge and therefore changed the design completely on this page. To make it easier 
+                to make the pages responsive and to make them cleaner and tidier, we started the programming process by making a grid layout for the intro page, campus page, and topical page. We made another layout 
+                for our accessibility page. To Make the pages responsive we used the media query in CSS, and then changed the grid layout when the screen size was minimized. We decided to add a navigation bar at the 
+                top of the page so the reader could easily navigate through our website. When the screen size reaches a certain width the navigation bar is changed to a dropdown menu. This is because we felt the normal 
+                navigation bar took up too much space when the screen was minimized. Some things we focused on when producing our page was to use headings in the correct order and dividing each paragraph/element on a 
+                page to make it easy to read and locate information. When we tested our site, we tested all our pages to make sure we stayed consisted with the styling and layout theme of our website. We also wanted 
+                to make sure every page did not contain any mistakes we may have overlooked. Since we stayed consistent through the whole project and focused on not missing any details, we were happy to see that the 
+                webaim accessibility test found zero errors on all our pages. 
+            </p>
+        </div>
+        <div class="code-image">
+            <img src="../images/accessibility-container.jpg">
+            <img src="../images/container.png">
+            <img src="../images/media-query.png">
+        </div>
+      </div>
+</body>
+</html>
